@@ -1,0 +1,39 @@
+.login{
+    margin: auto;
+    margin-top: 60px;
+    width: 30%;
+    align-items: center;
+    height: 65vh;
+    /* justify-content: center; */
+}
+body{
+    background-color: rgb(251, 247, 255);
+}
+a {
+    color:rgb(5, 5, 5);
+    text-decoration: none;
+}
+.menu{
+ height: 50px !important;
+}
+
+.feedback{
+    margin: auto;
+    width: 60%;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+.card{
+    margin: auto;
+    width: 70%;
+    align-items: center;
+}
+.about{
+    height:80vh ;
+}
+.blogdetail{
+    margin: auto;
+    margin-top: 10px !important;
+    margin-bottom: 20px;
+}
