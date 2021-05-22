@@ -13,22 +13,22 @@ const Feedback = () => {
     
     return (
         <div className="feedback">
-            <div class="ui piled segment">
-            <a class="ui black ribbon label"><h5>Enter Your Valuable Feedback</h5></a> 
-            <div class="ui form">
-                    <div class="field">
+            <div className="ui piled segment">
+            <a className="ui black ribbon label"><h5>Enter Your Valuable Feedback</h5></a> 
+            <div className="ui form">
+                    <div className="field">
                     <label>Your Name</label>
                     <input type="text" placeholder="Your Name"/>
                     </div>
-                    <div class="field">
+                    <div className="field">
                     <label>Email Id:</label>
                     <input type="email" placeholder="Enter email address"/>
                     </div>
-                    <div class="field">
+                    <div className="field">
                         <label>Text</label>
                         <textarea placeholder="Enter your feedback here...."></textarea>
                     </div>
-                    <button class="ui black button"> <i class="paper plane icon"></i>Submit Your Feedback</button>
+                    <button className="ui black button"> <i class="paper plane icon"></i>Submit Your Feedback</button>
                 </div>
             </div>
         </div>

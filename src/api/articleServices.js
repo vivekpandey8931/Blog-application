@@ -1,10 +1,16 @@
 import httpClient from '../helpers/http-client';
 
-const postArticle =async(data)=>{
-    let response=await httpClient.post('/users/login',data);
+const postarticle =async(data)=>{
+    let response=await httpClient.post('/post-article',data);
+    return response
+}
+
+const getarticles=async()=>{
+    let response=await httpClient.get('/getarticle')
     return response
 }
 
 export {
-    postArticle
+    postarticle,
+    getarticles
 }

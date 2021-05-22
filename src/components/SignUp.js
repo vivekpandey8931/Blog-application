@@ -35,24 +35,24 @@ const SignUp = ({ location,history}) => {
 
     return (
         <div className="login">
-             <div class="ui teal inverted segment">
+             <div className="ui teal inverted segment">
              {error && <Message  color={'red'}>{error}</Message>}
              {loading && <Spinner /> }
                  <h2>SignUp!</h2>
-                <div class="ui red inverted form">
-                    <div class="field">
+                <div className="ui red inverted form">
+                    <div className="field">
                         <label>Name:</label>
                         <input type="text" name="name" onChange={(e)=>setName(e.target.value)} value={name} placeholder="name"/>
                     </div>
-                    <div class="field">
+                    <div className="field">
                             <label>E-mail:</label>
                             <input type="email" onChange={(e)=>setEmail(e.target.value)} value={email} placeholder="xyz@gmail.com"/>
                     </div>
-                    <div class="field">
+                    <div className="field">
                         <label>Password:</label>
                         <input type="text" name="password"  onChange={(e)=>setPassword(e.target.value)} placeholder="password"/>
                     </div>
-                    <button class="ui button"onClick={submitHandler} >SignUp</button> already have account? <Link to='/login'>Login</Link>
+                    <button className="ui button"onClick={submitHandler} >SignUp</button> already have account? <Link to='/login'>Login</Link>
                 </div>
              </div>
         </div>

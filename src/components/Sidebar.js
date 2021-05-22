@@ -4,18 +4,18 @@ const Sidebar = ({toggle}) => {
   
   return (
         <div>
-           <div class="ui sidebar inverted vertical show menu">
-    <a class="item">
+           <div className="ui sidebar inverted vertical show menu">
+    <a className="item">
       1
     </a>
-    <a class="item">
+    <a className="item">
       2
     </a>
-    <a class="item">
+    <a className="item">
       3
     </a>
   </div>
-  <div class="pusher">
+  <div className="pusher">
     
   </div>
             </div>

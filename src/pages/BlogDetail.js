@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from "react";
 import Spinner from '../components/Spinner';
+import {useDispatch} from 'react-redux';
 import axios from 'axios';
-
+import {postArticle} from '../actions/articleAction';
 
 const BlogDetail = () => {
 const [title,setTitle]=useState('');
@@ -13,6 +14,7 @@ const [iframeLink,setIframeLink]=useState('');
 const [creatorname,setCreatorname]=useState('');
 const [uploading,setUploading]=useState(false);
 
+const dispatch=useDispatch();
 
 const uploadFileHnadler=async(e)=>{
 const file=e.target.files[0];
@@ -35,20 +37,27 @@ try{
     
 }
 
-const formSubmit=(e)=>{
-    e.preventDefaault();
+const formSubmit=async(e)=>{
+  e.preventDefault()
     const data={
         title,image,description,category,imagedescription,iframeLink,creatorname
     }
     console.log(data);
+  const res=await dispatch(postArticle(data))
+  if(res.status){
+    alert(res.message);
+    setTitle('');
+    setDescription('');
+    setImage('');
+  }
 }
 
   return (
     <div className="blogdetail">
-      <div class="ui container ">
+      <div className="ui container ">
         <h1>Blog detail Page</h1>
-        <form class="ui form"  onSubmit={formSubmit}>
-          <div class="field">
+        <form className="ui form"  onSubmit={formSubmit}>
+          <div className="field">
             <label>Blog Title</label>
             <input
               type="text"
@@ -58,20 +67,20 @@ const formSubmit=(e)=>{
               placeholder="Enter title here"
             />
           </div>
-          <div class="field">
+          <div className="field">
             <label>Blog Details</label>
             <textarea name="description"  value={description} onChange={(e)=>setDescription(e.target.value)} placeholder="Description about blog here ....."></textarea>
           </div>
-          <div class="field">
+          <div className="field">
             <select  onChange={(e)=>setCategory(e.target.value)} >
-              <option value="" disabled selected>
+              <option value="" disabled >
                 Category
               </option>
               <option value="Politics">Politics</option>
               <option value="Entertainment">Entertainment</option>
             </select>
           </div>
-          <div class="field">
+          <div className="field">
             <label>Image</label>
             <input
               type="text"
@@ -88,7 +97,7 @@ const formSubmit=(e)=>{
             />
             {uploading && <Spinner /> }
           </div>
-          <div class="field">
+          <div className="field">
             <label>Image description</label>
             <input
               type="text"
@@ -98,7 +107,7 @@ const formSubmit=(e)=>{
               placeholder="write something about image here..."
             />
           </div>
-          <div class="field">
+          <div className="field">
             <label>Iframe Link</label>
             <input
               type="text"
@@ -108,7 +117,7 @@ const formSubmit=(e)=>{
               placeholder="Paste the link here...."
             />
           </div>
-          <div class="field">
+          <div className="field">
             <label>Your Name</label>
             <input
               type="text"
@@ -119,9 +128,8 @@ const formSubmit=(e)=>{
             />
           </div>
 
-          <button class="ui button" type="submit">
-            Submit
-          </button>
+          <input value="submit" className="ui button" type="submit"/>
+            
         </form>
       </div>
     </div>

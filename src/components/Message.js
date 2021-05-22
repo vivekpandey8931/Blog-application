@@ -9,9 +9,9 @@ const Message = ({children,color}) => {
     }
     return (
         <div>
-            <div class={`ui message transition ${show} ${color}`}>
-                <i class="close icon" onClick={visibleHandler}></i>
-                <div class="header">
+            <div className={`ui message transition ${show} ${color}`}>
+                <i className="close icon" onClick={visibleHandler}></i>
+                <div className="header">
                   {color? 'Error!': 'Success!' } 
                 </div>
                 <p>{children}</p>

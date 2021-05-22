@@ -3,29 +3,29 @@ import React from 'react'
 const Footer = () => {
     return (
         <div>
-                    <div class="ui inverted vertical footer segment">
-            <div class="ui container">
-            <div class="ui stackable inverted divided equal height stackable grid">
-                <div class="three wide column">
-                <h4 class="ui inverted header">About</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Sitemap</a>
-                    <a href="#" class="item">Contact Us</a>
-                    <a href="#" class="item">Religious Ceremonies</a>
-                    <a href="#" class="item">Gazebo Plans</a>
+            <div className="ui inverted vertical footer segment">
+            <div className="ui container">
+            <div className="ui stackable inverted divided equal height stackable grid">
+                <div className="three wide column">
+                <h4 className="ui inverted header">About</h4>
+                <div className="ui inverted link list">
+                    <a href="#" className="item">Sitemap</a>
+                    <a href="#" className="item">Contact Us</a>
+                    <a href="#" className="item">Religious Ceremonies</a>
+                    <a href="#" className="item">Gazebo Plans</a>
                 </div>
                 </div>
-                <div class="three wide column">
-                <h4 class="ui inverted header">Services</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Banana Pre-Order</a>
-                    <a href="#" class="item">DNA FAQ</a>
-                    <a href="#" class="item">How To Access</a>
-                    <a href="#" class="item">Favorite X-Men</a>
+                <div className="three wide column">
+                <h4 className="ui inverted header">Services</h4>
+                <div className="ui inverted link list">
+                    <a href="#" className="item">Banana Pre-Order</a>
+                    <a href="#" className="item">DNA FAQ</a>
+                    <a href="#" className="item">How To Access</a>
+                    <a href="#" className="item">Favorite X-Men</a>
                 </div>
                 </div>
-                <div class="seven wide column">
-                <h4 class="ui inverted header"><button class="positive ui button">Donate Us</button></h4>
+                <div className="seven wide column">
+                <h4 className="ui inverted header"><button className="positive ui button">Donate Us</button></h4>
                 <p>Every little help is appreciated! Support us</p>
                 </div>
             </div>

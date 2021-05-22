@@ -30,18 +30,18 @@ const submitHandler=async(e)=>{
         <div className="login">
             {error && <Message  color={'red'}>{error}</Message>}
             {loading && <Spinner /> }
-            <div class="ui teal inverted segment">
+            <div className="ui teal inverted segment">
              <h2>Login!</h2>
-                <div class="ui red inverted form">
-                    <div class="field">
+                <div className="ui red inverted form">
+                    <div className="field">
                             <label>E-mail:</label>
                             <input type="email" name="email"  onChange={(e)=>setEmail(e.target.value)} value={email} placeholder="xyz@gmail.com"/>
                     </div>
-                    <div class="field">
+                    <div className="field">
                         <label>Password:</label>
                         <input type="text" name="password"  onChange={(e)=>setPassword(e.target.value)}  value={password} placeholder="password"/>
                     </div>
-                    <button class="ui button" onClick={submitHandler} >Login</button> new user ? <Link to='/signup'>SignUp</Link>
+                    <button className="ui button" onClick={submitHandler} >Login</button> new user ? <Link to='/signup'>SignUp</Link>
                 </div>
              </div>
         </div>

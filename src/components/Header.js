@@ -14,24 +14,23 @@ const Header = () => {
 
     return (
         <div>
-            <div class="ui  inverted menu">
+            <div className="ui  inverted menu">
                 <div className="ui item">   
-                    <Link to='/' class="item"><i class="home icon"></i>Home</Link>
-                    <Link to='/aboutus'  class="item">About-us</Link> 
-                    <a class="item">Contact Us</a>
-                    <Link to='/feedback' class="item">Feedback</Link> 
+                    <Link to='/' className="item"><i className="home icon"></i>Home</Link>
+                    <Link to='/aboutus'  className="item">About-us</Link> 
+                    <a className="item">Contact Us</a>
+                    <Link to='/feedback' className="item">Feedback</Link> 
                 </div>
                 <div className="right menu">
                    {userInfo ?
-                   <div class="ui simple dropdown item">
-                   <i class="user circle icon"></i>{userInfo.name} <i class="fa fa-caret-down"></i>
-                   <div class="menu">
-                   <div class="item" onClick={logOutHandler}><i class="sign-out icon"></i>sign out</div>
+                   <div className="ui simple dropdown item">
+                   <i className="user circle icon"></i>{userInfo.name} <i className="fa fa-caret-down"></i>
+                   <div className="menu">
+                   <div className="item" onClick={logOutHandler}><i className="sign-out icon"></i>sign out</div>
                    </div>
                </div>
                    :
-                   <Link to='/login' class="item" ><i class="sign-out icon"></i>Sign In</Link>}
- 
+                   <Link to='/login' className="item" ><i className="sign-out icon"></i>Sign In</Link>}
                     </div>
             </div>
         </div>
