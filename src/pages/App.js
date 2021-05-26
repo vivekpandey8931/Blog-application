@@ -10,21 +10,23 @@ import Home from './Home';
 import SignUp from '../components/SignUp';
 import Feedback from './Feedback';
 import Footer from '../components/Footer';
-import BlogDetail from './BlogDetail';
+import BlogDetail from './AddBlog';
 function App (){
     return(
         <div className="app">
            <BrowserRouter>
               <Header/>
               <Sidebar/>
+              <div className="main">
               <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/login' component={Login} />
                 <Route path='/aboutus' component={AboutUs}/>
                 <Route path='/signup' component={SignUp}/>
                 <Route path='/feedback' component={Feedback}/>
-                <Route path='/blogdetail' component={BlogDetail} />
+                <Route path='/addblog' component={BlogDetail} />
             </Switch>
+            </div>
             <Footer/>
            </BrowserRouter>
         </div>
